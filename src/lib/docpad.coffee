@@ -2217,7 +2217,7 @@ class DocPad extends EventSystem
 		finish = (err) ->
 			return complete(err)  if err
 			# Plugins
-			docpad.emitSync 'serverAfter', {docpad}, (err) ->
+			docpad.emitSync 'serverAfter', {server}, (err) ->
 				return complete(err)  if err
 				# Complete
 				docpad.log 'debug', 'Server setup'
